@@ -50,9 +50,9 @@ class PageScrollState: ObservableObject {
              newOffset = -(dimension * CGFloat(viewCount - 1))
         } else {
             let pageOffset = abs(contentOffset) - CGFloat(selectedPage) * dimension
-            if pageOffset > 0.5*dimension {
+            if pageOffset > 0.1*dimension {
                 newPage += 1
-            } else if pageOffset < -0.5*dimension {
+            } else if pageOffset < -0.1*dimension {
                 newPage -= 1
             }
              
